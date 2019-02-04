@@ -24,11 +24,14 @@ class Product extends Component {
                   <button
                     className="cart-btn"
                     disabled={inCart ? true : false}
-                    onClick={() => value.addToCart(id)}
+                    onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}
                   >
                     {inCart ? (
                       <p className="text-capitalize mb-0" disabled>
-                        In Cart
+                        Adicionado
                       </p>
                     ) : (
                       <i className="fas fa-cart-plus" />
@@ -43,7 +46,7 @@ class Product extends Component {
             >
               <p className="align-self-center mb-0">{title}</p>
               <h5 className="text-blue font-italic mb-0">
-                <span className="mr-1">$</span>
+                <span className="mr-1">R$</span>
                 {price}
               </h5>
             </div>
