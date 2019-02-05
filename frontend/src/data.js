@@ -6,7 +6,7 @@ export const storeProducts = [
     price: 20.0,
     company: "GOOGLE",
     info: "Informações sobre o dispositivo",
-    inCart: true,
+    inCart: false,
     count: 0,
     total: 0
   },
